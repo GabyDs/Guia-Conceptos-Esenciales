@@ -1,0 +1,34 @@
+#+title: Chezmoi
+#+author: Gabriel da Silva
+#+date: 12-04-2025
+
+* Qué hace chezmoi
+
+Ayuda a manejar archivos de configuración (como dotfiles) a través de varias computadoras.
+
+** Características
+
+- Templates
+- Password manager support
+- Importing files from archives
+- Full file encryption
+- Running scripts
+
+** Conceptos
+
+Chezmoi almacena el estado de los dotfiles en *~/.local/share/chezmoi*.
+
+Cuando se ejecute *chezmoi apply*, chezmoi calcula el contenido *deseado*
+para cada uno de los dotfiles y realiza los cambios mínimos para que se
+ajusten al estado deseado.
+
+*** Chezmoi sequence
+
+[[./img/chezmoi_sequence.png]]
+
+*** Chezmoi commands
+
+*chezmoi add $FILE$*: para agregar un archivo al directorio de trabajo.
+*chezmoi edit $FILE*: para editar un archivo.
+*chezmoi -v apply*: para aplicar los cambios al directorio local.
+*chezmoi diff*: para ver los cambios en los archivos.
