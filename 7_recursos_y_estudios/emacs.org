@@ -13,4 +13,4 @@ Nunca modificar *init.el* y *early-init.el*.
 - *pre-early-init.el*: Configuraciones que deban establecerse antes de la secuencia
   de arranque, afecta a la configuraciṕon inicial de emacs.
 - *post-early-init.el*: Configuraciones que dependen de la incialización temprana
-  pero que deben establecerse antes de que comience la inicialización principal. 
+  pero que deben establecerse antes de que comience la inicialización principal.

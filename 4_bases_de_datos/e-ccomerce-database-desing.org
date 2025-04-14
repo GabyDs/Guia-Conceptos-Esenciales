@@ -1,0 +1,44 @@
+#+title: E-Commerce Database Desing
+#+author: Gabriel da Silva
+#+date:13-04-2025
+
+* Un buen diseño de base de datos de e-commerce incluye
+
+- *Estructura de base de datos sencilla y funcional*: Cubre todas las
+  necesidades comprometer la experiencia de usuario.
+- *Alto rendimiento*: Consultas rápidas. Buena indexación y optimización.
+- *Alta disponibilidad y escalabilidad*: Tiene que soportar escalado
+  automático y picos de uso.
+
+** Partes fundamentales
+
+- *Alcance*: La estructura de las tablas dependen de la funcionalidad de la
+   plataforma.
+- *Tipo*: Puede variar entre SQL y NoSQL.
+- *Infraestructura*: Puede ser no administrada o administrada. La primera
+   es crear un servicio propio, la segunda utilizar algo como Amazon
+   DynamoDB.
+
+*** Alcance
+
+La principal consideración a la hora de diseñar la base de datos es
+identificar las funcionalidades que ofrece la plataforma. Estas
+funcionalidades pueden dividirse a su vez en funciones básicas y funciones
+adicionales.
+
+- Las *funciones básicas* son las necesarias para facilitar las
+  operaciones cotidianas de la plataforma, como gestión de usuarios, de
+  productos e inventario, función de carrito de compra, gestión de pago y
+   la gestión de envíos y logística.
+
+  - Para nuestro caso, como estámos simulando un e-commerce, no vamos a
+    tener carrito de compras ni gestión de envíos, al menos no en el corto
+     plazo.
+
+- Las *funciones adicionales* mejoran la experiencia de usuario (clientes)
+  como para los administradores (empresa). Estas funciones pueden ser
+  marketing, asistencia y soporte e integraciones con terceros.
+
+  - Nuestro caso se asemeja más al marketplace de facebook, es decir, una
+    persona publica su producto a la venta y otra lo compra.
+    
