@@ -1,0 +1,33 @@
+#+title: Introducción a Bases de Datos
+#+author: Gabriel da Silva
+#+date: 15-04-2025
+
+* Bases de datos SQL
+
+Una base de datos SQL (o relacional) organiza datos en tablas estructuradas con
+filas (registros) y columnas (atributos). Estas tablas se relacionan entre sí
+mediante claves, lo que permite gestionar datos de manera eficiente y evitar
+redundancias.
+
+** Conceptos fundamentales
+
+1. *Tablas*:
+   - Estructuras que almacenan datos en formato fila-columna.
+   - Ejemplo: Tabla Productos con columnas id, nombre, precio, stock.
+2. *Clave Primaria (PK)*:
+   - Columna (o conjunto) que identifica de forma única cada fila en una tabla.
+   - Ejemplo: id en la tabla Productos garantiza que cada producto tenga un
+     identificador único.
+3. *Clave Foránea (FK)*:
+   - Columna que establece una relación con la PK de otra tabla.
+   - Ejemplo: usuario_id en la tabla Órdenes referencia al id de la tabla
+     Usuarios.
+4. *Relaciones*:
+   - *Uno a muchos*: Un registro en una tabla se vincula a múltiples registros en
+     otra.
+     - Ejemplo: Un usuario (Usuarios) puede tener múltiples órdenes (Órdenes).
+   - *Uno a uno*: Un registro en una tabla se vincula a un solo registro en otra.
+   - *Muchos a muchos*: Requiere una tabla intermedia para vincular registros.
+5. *Integridad Referencial*:
+   - Garantiza que las FK siempre apunten a PK válidas, evitando datos
+     huérfanos.
