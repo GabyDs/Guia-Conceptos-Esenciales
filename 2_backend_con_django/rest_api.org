@@ -1,0 +1,51 @@
+#+title: Conceptos de API
+#+author: Gabriel da Silva
+#+date: 14-04-2025
+
+* Introducción
+
+La arquitectura *REST* procede de Representational State Transfer. Las API
+RESTfull se basan en recursos. Sus modelos representan recursos y se utilizan
+métodos HTTP como GET, POST, PUT, DELETE. Los códigos de respuesta HTTP también
+se utilizan en este contexto. Se devuelven diferentes códigos de respuesta HTTP
+para indicar el resultado de la solicitud HTTP, por ejemplo, códigos de
+respuesta 2xx para éxito, 4xx para errores, etc.
+
+La forma más común de intercambiar datos en API RESTfull son JSON y XML.
+
+** Serializers
+
+Convierten objetos complejos, como instancias de modelos de django, en formatos
+de datos simples y fácilmente transferibles, como JSON o XML.
+Además, validan la información entrante, asegurando que cumpla con los
+requisitos esperados antes de ser procesada.
+Esto quiere decir que, los datos salientes deben serializarse en un formato
+específico, y los datos entrantes se deserializarán para su procesamiento.
+
+El framework de django-rest provee diferentes clases para crear serializadores:
+
+- *Serializer*: provee serialización para clases normales de python.
+- *Model serializer*: provee serialización para instancias de modelos.
+- *HyperLinkedModelSerializer*: lo mismo que el anterior, pero representa las
+  relaciones entre objetos con enlaces en vez de claves primarias.
+  - Según la documentación de django-rest, utilizar hipervínculos son un buen
+    diseño de RESTfull API. 
+
+** ViewSets
+
+Son una abstracción que permite combinar la lógica de un conjunto de vistas
+relacionadas en una sola clase.
+Útil para simplificar el código y automatizar la configuración de urls.
+Tienen la capacidad de utilizar múltiples serializadores para diferentes
+acciones.
+
+** Routers
+
+Facilita la creación de URLs para las vistas de manera automática.
+Pueden generar URLs para acciones como listar y recuperar objetos.
+Pueden manejar diferentes métodos HTTP como GET, POST, PUT, PATCH y DELETE para
+diferentes acciones.
+
+** Paginación
+
+Permite controlar cuántos objetos se devuelven por página.
